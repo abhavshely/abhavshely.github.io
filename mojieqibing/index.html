@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="魔界奇兵-深度解析魔界奇兵世界观、角色图鉴及同人创作分享平台，探索神秘奇幻世界的战斗与羁绊。">
+    <meta name="keywords" content="魔界奇兵,魔界奇兵同人,魔界奇兵攻略,魔界奇兵角色,奇幻动漫,二次元">
+    <title>魔界奇兵-奇幻冒险与角色图鉴深度解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #6a1b9a;
+            --secondary-color: #ab47bc;
+            --accent-color: #ffd700;
+            --dark-bg: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title span {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            font-weight: normal;
+            border-left: none;
+            padding-left: 0;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(0,0,0,0.8));
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid #333;
+            padding: 15px 0;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 25px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(18,18,18,1)), url('https://picsum.photos/seed/phantom/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.8);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+            color: #ddd;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid var(--secondary-color);
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid var(--text-main);
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Character Grid */
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            padding: 40px 0;
+        }
+
+        .char-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #333;
+        }
+
+        .char-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(106, 27, 154, 0.3);
+            border-color: var(--secondary-color);
+        }
+
+        .char-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #2a2a2a;
+        }
+
+        .char-info {
+            padding: 15px;
+        }
+
+        .char-name {
+            font-size: 1.2rem;
+            margin-bottom: 5px;
+            color: var(--text-main);
+        }
+
+        .char-role {
+            font-size: 0.85rem;
+            color: var(--secondary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .char-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Story/Concept Section */
+        .concept-section {
+            background-color: #1a1a1a;
+            padding: 60px 0;
+            margin-top: 40px;
+        }
+
+        .concept-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .concept-text h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .concept-text p {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        .concept-image {
+            position: relative;
+        }
+
+        .concept-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+
+        /* Stats/Timeline */
+        .stats-section {
+            padding: 60px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #000;
+            padding: 40px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #555;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-wrapper {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .concept-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">魔界奇兵 <span>ARCHIVES</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#characters">角色图鉴</a></li>
+                    <li><a href="#story">世界观</a></li>
+                    <li><a href="#community">同人社区</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>魔界奇兵</h1>
+                <p>探索神秘的亚空间，见证钢铁与魔法的碰撞。这里是所有奇幻冒险爱好者的终极档案库。</p>
+                <div>
+                    <a href="#characters" class="btn">查看角色</a>
+                    <a href="#story" class="btn btn-outline">阅读设定</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics -->
+        <section class="stats-section">
+            <div class="container stats-grid">
+                <div class="stat-item">
+                    <h3>3</h3>
+                    <p>主要阵营</p>
+                </div>
+                <div class="stat-item">
+                    <h3>12</h3>
+                    <p>核心角色</p>
+                </div>
+                <div class="stat-item">
+                    <h3>∞</h3>
+                    <p>未知传说</p>
+                </div>
+                <div class="stat-item">
+                    <h3>1</h3>
+                    <p>终极目标</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Characters Section -->
+        <section id="characters" class="container">
+            <div class="section-title">
+                角色图鉴
+                <span>精选核心人物解析</span>
+            </div>
+            
+            <div class="character-grid">
+                <!-- Character 1 -->
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/knight/400/500" alt="凯尔" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">凯尔</h3>
+                        <div class="char-role">前线先锋</div>
+                        <p class="char-desc">身穿重甲的战士，拥有极高的防御力和近战技巧，是队伍的中流砥柱。</p>
+                    </div>
+                </article>
+
+                <!-- Character 2 -->
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/mage/400/500" alt="艾琳娜" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">艾琳娜</h3>
+                        <div class="char-role">元素法师</div>
+                        <p class="char-desc">操控火焰与冰霜的魔法师，擅长远程打击和群体控制，性格冷静。</p>
+                    </div>
+                </article>
+
+                <!-- Character 3 -->
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/rogue/400/500" alt="暗影" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">暗影</h3>
+                        <div class="char-role">潜行者</div>
+                        <p class="char-desc">来自阴影的刺客，行动敏捷，擅长侦察和致命一击，行踪诡秘。</p>
+                    </div>
+                </article>
+
+                <!-- Character 4 -->
+                <article class="char-card">
+                    <img src="https://picsum.photos/seed/healer/400/500" alt="塞拉" class="char-img">
+                    <div class="char-info">
+                        <h3 class="char-name">塞拉</h3>
+                        <div class="char-role">圣光祭司</div>
+                        <p class="char-desc">掌握治愈与净化之术的辅助角色，在战场上守护队友的生命线。</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Concept Section -->
+        <section id="story" class="concept-section">
+            <div class="container concept-layout">
+                <div class="concept-image">
+                    <img src="https://picsum.photos/seed/dungeon/800/600" alt="魔界奇兵世界观概念图">
+                </div>
+                <div class="concept-text">
+                    <h2>破碎的世界观</h2>
+                    <p>在“魔界奇兵”的世界中，现实与亚空间的界限日益模糊。一场突如其来的灾难撕裂了空间，将人类与异界生物困在了一起。</p>
+                    <p>为了生存，幸存者组建了名为“魔界奇兵”的特殊小队。他们不仅要面对外部怪物的侵蚀，还要解决阵营之间的内部矛盾。</p>
+                    <p>本站致力于整理所有关于该世界的背景设定、历史遗迹以及未被记录的传说。</p>
+                    <a href="#" class="btn" style="margin-top: 20px;">阅读完整设定集</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Community/Updates -->
+        <section class="container">
+            <div class="section-title">
+                最新动态
+                <span>同人创作与资讯更新</span>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+                <article style="background: var(--card-bg); padding: 20px; border-radius: 8px; border-left: 3px solid var(--accent-color);">
+                    <h4 style="margin-bottom: 10px;">同人新作：《深渊回响》发布</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">作者：ShadowWalker | 2023-10-24</p>
+                </article>
+                <article style="background: var(--card-bg); padding: 20px; border-radius: 8px; border-left: 3px solid var(--secondary-color);">
+                    <h4 style="margin-bottom: 10px;">设定补丁：新增种族“灵体族”详解</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">官方公告 | 2023-10-20</p>
+                </article>
+                <article style="background: var(--card-bg); padding: 20px; border-radius: 8px; border-left: 3px solid var(--primary-color);">
+                    <h4 style="margin-bottom: 10px;">社区活动：绘制你心目中的终极BOSS</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">互动话题 | 2023-10-15</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于魔界奇兵</h4>
+                    <p style="color: var(--text-muted); font-size: 0.9rem;">这是一个专注于奇幻冒险、角色设定与同人创作的虚拟档案库。我们致力于还原最真实的幻想世界。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">角色列表</a></li>
+                        <li><a href="#">武器图鉴</a></li>
+                        <li><a href="#">剧情时间线</a></li>
+                        <li><a href="#">联系管理员</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>友情链接</h4>
+                    <ul>
+                        <li><a href="#">奇幻文学网</a></li>
+                        <li><a href="#">二次元联盟</a></li>
+                        <li><a href="#">插画素材库</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 魔界奇兵 Archives. All rights reserved. 本站为非官方粉丝制作，仅供学习交流使用。
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
