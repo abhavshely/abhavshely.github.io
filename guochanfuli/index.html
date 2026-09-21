@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="国产福利视频网站 - 提供最新最全的国产成人视频资源，包含高清在线观看、分类导航、热门推荐及用户评论。">
+    <meta name="keywords" content="国产福利视频网站,国产视频,成人视频,在线观看,高清资源">
+    <title>国产福利视频网站-高清在线观看与资源导航</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d32f2f;
+            --secondary-color: #880e4f;
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #ffffff;
+            --text-sub: #b0b0b0;
+            --accent: #ff4081;
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            outline: none;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        a:hover {
+            color: var(--accent);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        .nav-links a.active, .nav-links a:hover {
+            color: var(--text-main);
+        }
+
+        .search-box {
+            display: flex;
+            background: #2c2c2c;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .search-box input {
+            background: transparent;
+            border: none;
+            padding: 6px 10px;
+            color: white;
+            width: 200px;
+        }
+
+        .search-box button {
+            background: var(--primary-color);
+            border: none;
+            padding: 0 12px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c0e0e 0%, #000000 100%);
+            padding: 40px 0;
+            text-align: center;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--accent);
+        }
+
+        .hero p {
+            color: var(--text-sub);
+            max-width: 600px;
+            margin: 0 auto 20px;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: rgba(255, 64, 129, 0.1);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid rgba(255, 64, 129, 0.2);
+        }
+
+        /* Main Grid */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 24px;
+            margin-top: 30px;
+            padding-bottom: 40px;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 70px;
+            height: fit-content;
+        }
+
+        .sidebar-section {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 16px;
+            margin-bottom: 20px;
+            border: 1px solid #333;
+        }
+
+        .sidebar-title {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #333;
+            color: var(--text-main);
+        }
+
+        .category-list li {
+            border-bottom: 1px solid #2a2a2a;
+        }
+
+        .category-list a {
+            display: block;
+            padding: 8px 0;
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+
+        .category-list a:hover {
+            color: var(--accent);
+            padding-left: 5px;
+        }
+
+        .ranking-list li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+            font-size: 13px;
+        }
+
+        .ranking-num {
+            width: 20px;
+            height: 20px;
+            background: #333;
+            color: var(--text-sub);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            font-size: 12px;
+        }
+
+        .ranking-num.top1 { background: var(--primary-color); color: white; }
+        .ranking-num.top2 { background: var(--secondary-color); color: white; }
+        .ranking-num.top3 { background: #f57c00; color: white; }
+
+        /* Content Area */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .view-more {
+            font-size: 12px;
+            color: var(--text-sub);
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+        }
+
+        .video-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #333;
+        }
+
+        .video-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+            border-color: var(--accent);
+        }
+
+        .card-thumb {
+            position: relative;
+            width: 100%;
+            padding-top: 56.25%; /* 16:9 Aspect Ratio */
+            background: #000;
+        }
+
+        .card-thumb img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.8;
+        }
+
+        .card-play-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: rgba(0,0,0,0.6);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(2px);
+        }
+
+        .card-play-icon::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            border-left: 8px solid white;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            margin-left: 2px;
+        }
+
+        .card-info {
+            padding: 12px;
+        }
+
+        .card-title {
+            font-size: 14px;
+            margin-bottom: 6px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            color: var(--text-main);
+        }
+
+        .card-meta {
+            display: flex;
+            justify-content: space-between;
+            font-size: 11px;
+            color: var(--text-sub);
+        }
+
+        .badge {
+            background: #333;
+            padding: 1px 4px;
+            border-radius: 2px;
+            font-size: 10px;
+        }
+
+        .badge.hd { background: var(--primary-color); color: white; }
+        .badge.mp4 { background: #009688; color: white; }
+
+        /* Footer */
+        footer {
+            background: #0a0a0a;
+            padding: 40px 0 20px;
+            border-top: 1px solid #333;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-main);
+            margin-bottom: 16px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 8px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-sub);
+            font-size: 13px;
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 12px;
+            border-top: 1px solid #222;
+            padding-top: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            aside {
+                display: none;
+            }
+            .nav-links {
+                display: none;
+            }
+            .search-box {
+                display: none;
+            }
+            .header-inner {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                <line x1="7" y1="2" x2="7" y2="22"></line>
+                <line x1="17" y1="2" x2="17" y2="22"></line>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <line x1="2" y1="7" x2="7" y2="7"></line>
+                <line x1="2" y1="17" x2="7" y2="17"></line>
+                <line x1="17" y1="17" x2="22" y2="17"></line>
+                <line x1="17" y1="7" x2="22" y2="7"></line>
+            </svg>
+            <span>国产福利视频网站</span>
+        </a>
+        <nav class="nav-links">
+            <a href="#" class="active">首页</a>
+            <a href="#">最新发布</a>
+            <a href="#">高清专区</a>
+            <a href="#">分类浏览</a>
+            <a href="#">排行榜</a>
+        </nav>
+        <div class="search-box">
+            <input type="text" placeholder="搜索视频...">
+            <button>搜索</button>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <h1>探索高清国产视频资源</h1>
+            <p>海量国产福利视频在线播放，支持多种清晰度切换，提供流畅稳定的观影体验。</p>
+            <div class="hero-tags">
+                <span class="tag">高清MP4</span>
+                <span class="tag">独家首发</span>
+                <span class="tag">4K专区</span>
+                <span class="tag">无水印</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container main-grid">
+        <aside>
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">视频分类</h3>
+                <ul class="category-list">
+                    <li><a href="#">全部视频</a></li>
+                    <li><a href="#">国产精选</a></li>
+                    <li><a href="#">无码专区</a></li>
+                    <li><a href="#">高清专区</a></li>
+                    <li><a href="#">近期更新</a></li>
+                    <li><a href="#">经典回顾</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">热门排行</h3>
+                <ul class="ranking-list">
+                    <li><span class="ranking-num top1">1</span> <a href="#">最新国产剧情片</a></li>
+                    <li><span class="ranking-num top2">2</span> <a href="#">高清无码合集</a></li>
+                    <li><span class="ranking-num top3">3</span> <a href="#">深夜福利推荐</a></li>
+                    <li><span class="ranking-num">4</span> <a href="#">2024最新国产</a></li>
+                    <li><span class="ranking-num">5</span> <a href="#">独家主播视频</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">站点导航</h3>
+                <ul class="category-list">
+                    <li><a href="#">资源站大全</a></li>
+                    <li><a href="#">软件下载</a></li>
+                    <li><a href="#">安卓客户端</a></li>
+                    <li><a href="#">会员中心</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <div class="content">
+            <section class="section-header">
+                <h2 class="section-title">最新更新</h2>
+                <a href="#" class="view-more">查看更多 &raquo;</a>
+            </section>
+            
+            <div class="video-grid">
+                <!-- Video Card 1 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video1/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">国产最新福利视频：高清无码版</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge hd">HD</span> 45分钟</span>
+                            <span>1.2万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 2 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video2/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">高清国产剧情片推荐：深夜福利</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge mp4">MP4</span> 32分钟</span>
+                            <span>8900次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 3 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video3/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">国产精选：高清无码专区更新</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge hd">HD</span> 60分钟</span>
+                            <span>5600次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 4 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video4/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">2024最新国产福利视频合集</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge mp4">MP4</span> 50分钟</span>
+                            <span>3.4万次播放</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <section class="section-header" style="margin-top: 40px;">
+                <h2 class="section-title">热门推荐</h2>
+                <a href="#" class="view-more">查看更多 &raquo;</a>
+            </section>
+
+            <div class="video-grid">
+                <!-- Video Card 5 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video5/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">经典国产福利视频：高清修复</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge hd">HD</span> 40分钟</span>
+                            <span>2.1万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 6 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video6/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">独家国产主播直播视频回放</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge mp4">MP4</span> 25分钟</span>
+                            <span>9800次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 7 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video7/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">高清国产无码专区：每日更新</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge hd">HD</span> 55分钟</span>
+                            <span>1.5万次播放</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Video Card 8 -->
+                <article class="video-card">
+                    <a href="#" class="card-thumb">
+                        <img src="https://picsum.photos/seed/video8/300/169" alt="视频封面">
+                        <div class="card-play-icon"></div>
+                    </a>
+                    <div class="card-info">
+                        <h3 class="card-title"><a href="#">国产福利视频：4K超清画质</a></h3>
+                        <div class="card-meta">
+                            <span><span class="badge hd">HD</span> 48分钟</span>
+                            <span>4.2万次播放</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">网站简介</a></li>
+                    <li><a href="#">联系方式</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul>
+                    <li><a href="#">最新发布</a></li>
+                    <li><a href="#">热门排行</a></li>
+                    <li><a href="#">高清专区</a></li>
+                    <li><a href="#">分类导航</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>资源类型</h4>
+                <ul>
+                    <li><a href="#">国产视频</a></li>
+                    <li><a href="#">高清MP4</a></li>
+                    <li><a href="#">无码专区</a></li>
+                    <li><a href="#">安卓下载</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>服务支持</h4>
+                <ul>
+                    <li><a href="#">帮助中心</a></li>
+                    <li><a href="#">意见反馈</a></li>
+                    <li><a href="#">加入我们</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2024 国产福利视频网站. All Rights Reserved. 本站内容仅供个人学习交流使用，请勿用于任何商业用途。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+  </html>
